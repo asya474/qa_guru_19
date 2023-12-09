@@ -40,31 +40,20 @@ def test_delete_204_succesfully():
 
     assert result.status_code == 204
 
+def test_get_single_user_not_found_404_unsuccessfully():
+    url = "https://reqres.in/api/users/23"
+
+    result: Response = requests.get(url)
+
+    assert result.status_code == 404
+
+def test_post_register_400_unsuccessfully():
+    url = "https://reqres.in/api/register"
+    schema = load_schema("json_schemes/post_400.json")
+
+    result: Response = requests.post(url)
+
+    assert result.status_code == 400
+    jsonschema.validate(result.json(), schema)
 
 
-def test_404():
-    pass
-
-def test_400():
-    pass
-
-def test_json_scheme_one():
-    pass
-
-def test_json_scheme_two():
-    pass
-
-def test_json_scheme_three():
-    pass
-
-def test_json_scheme_four():
-    pass
-
-def test_json_scheme_five():
-    pass
-
-def test_with_answer():
-    pass
-
-def test_without_answer():
-    pass
