@@ -45,3 +45,58 @@ def test_list_of_users_per_page():
 
     assert result.json()["per_page"] == per_page
     assert len(result.json()['data']) == per_page
+
+
+def test_get():
+    pass
+
+def test_post():
+    pass
+
+def test_put():
+    pass
+
+def test_delete():
+    pass
+
+def test_positive():
+    pass
+
+def test_negative():
+    pass
+
+def test_200():
+    pass
+
+def test_201():
+    pass
+
+def test_204():
+    pass
+
+def test_404():
+    pass
+
+def test_400():
+    pass
+
+def test_json_scheme_one():
+    pass
+
+def test_json_scheme_two():
+    pass
+
+def test_json_scheme_three():
+    pass
+
+def test_json_scheme_four():
+    pass
+
+def test_json_scheme_five():
+    pass
+
+def test_with_answer():
+    pass
+
+def test_without_answer():
+    pass
